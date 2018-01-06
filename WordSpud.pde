@@ -60,7 +60,7 @@ void keyPressed(){
     }
 }
 void mousePressed(){
-  saveFrame("words-######.png");
+  saveFrame("Snapshot("+hour()+"_"+minute()+"_"+day()+"_"+month()+"_"+year()+").png");
   
   finalWords = new String[wordCount]; 
   for(int i = 0; i < finalWords.length; i++){
