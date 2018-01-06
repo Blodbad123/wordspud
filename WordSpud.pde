@@ -65,7 +65,7 @@ void keyPressed() {
 <<<<<<< HEAD
 void mousePressed(){
   saveFrame("Snapshot("+hour()+"_"+minute()+"_"+day()+"_"+month()+"_"+year()+").png");
-  
+}
 =======
 void mousePressed() {
   saveFrame("words-######.png");
