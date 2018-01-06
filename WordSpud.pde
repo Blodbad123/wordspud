@@ -2,11 +2,15 @@ char letter;
 String word = "";
 String intro = "Hi Quick Quick Obey, use me for lyrics"; 
 String[] words = new String[1000]; 
+String[] finalWords; 
 int[] textSizes = new int[words.length];
 float[] textPositionsX = new float [words.length]; 
 int[] alphaValues = new int[words.length]; 
 int wordCount = 0; 
 int maxWords = 21; 
+
+// Hor fast the words should fade out. Can just be altered to fit. 
+float decreaseVal = 1.2; 
 
 int spacingToAdd = 30; 
 int textPosY = 34; 
@@ -28,7 +32,6 @@ void setup() {
   for(int i = 0; i < alphaValues.length; i++){
   alphaValues[i] = 255; 
   }
-  
 }
 
 void draw(){
@@ -58,6 +61,12 @@ void keyPressed(){
 }
 void mousePressed(){
   saveFrame("words-######.png");
+  
+  finalWords = new String[wordCount]; 
+  for(int i = 0; i < finalWords.length; i++){
+    finalWords[i] = words[i]; 
+  }
+    saveStrings("LyricsIspiration("+hour()+"_"+minute()+"_"+day()+"_"+month()+"_"+year()+").txt", finalWords); 
 }
 
 
@@ -85,7 +94,7 @@ void AddWordToBackground(){
    } else{
    textPosY = 34;
       for (int j = 0; j < wordCount-maxWords; j++){
-        alphaValues[j] -= 2; 
+        alphaValues[j] -= decreaseVal; 
    // Begin to fade out first text portions. 
     }
   }
