@@ -62,15 +62,11 @@ void keyPressed() {
     enterType = true; 
   }
 }
-<<<<<<< HEAD
+
 void mousePressed(){
   saveFrame("Snapshot("+hour()+"_"+minute()+"_"+day()+"_"+month()+"_"+year()+").png");
-}
-=======
-void mousePressed() {
-  saveFrame("words-######.png");
 
->>>>>>> 219166716e27773b0f27510cd5e1b8896404fb44
+
   finalWords = new String[wordCount]; 
   for (int i = 0; i < finalWords.length; i++) {
     finalWords[i] = words[i];
