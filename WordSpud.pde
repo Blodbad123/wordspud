@@ -13,19 +13,18 @@ int sizeToAdd = 10;
 
 
 void setup() {
-  size(1200, 900);
+  size(1200, 800);
   textSize(sizeOfText);
   text(intro, width/2, 50);
   background(0); 
   stroke(255); 
   strokeWeight(7); 
-  line(0, 800, width, 800); 
-
+  line(0, 700, width, 700); 
   textAlign(CENTER);
 }
 
 void draw(){
-
+ 
 }
 void keyTyped() {
   intro = ""; 
@@ -49,8 +48,13 @@ void keyPressed(){
       word = ""; 
     }
 }
+void mousePressed(){
+  saveFrame("words-######.png");
+}
+
+
 void AddToWords(String input){
-  textSize(int(random(14, 60))); 
+  textSize(int(random(14, 50))); 
     words[wordCount] = input; 
     textPositionsX[wordCount] = random(0, width - textWidth(words[wordCount]) + 20); 
     textSizes[wordCount] = int(random(14,80)); 
@@ -62,7 +66,7 @@ void AddWordToBackground(){
   background(0); 
   stroke(255); 
   strokeWeight(7);
-  line(0, 800, width, 800); 
+  line(0, 700, width, 700); 
   textPosY = 34;
    for(int i = 0; i < wordCount; i++){
      textSize(textSizes[i]); 
