@@ -12,7 +12,7 @@ int maxWords = 21;
 // Hor fast the words should fade out. Can just be altered to fit. 
 float decreaseVal = 1.2; 
 
-int spacingToAdd = 30; 
+int spacingToAdd = 35; 
 int textPosY = 34; 
 int sizeOfText = 30; 
 int sizeToAdd = 10; 
